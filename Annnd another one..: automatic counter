@@ -1,0 +1,6 @@
+i = 0
+while i < 99999:
+    # do_something()
+    i += 1
+    print("annnd another one..: ")
+    print(i)
