@@ -1,0 +1,72 @@
+
+
+# Scenario
+# Listen to this story: a boy and his father, a computer programmer, are playing with
+#     wooden blocks. They are building a pyramid.
+#
+# Their pyramid is a bit weird, as it is actually a pyramid-shaped wall - it's flat. '
+# 'The pyramid is stacked according to one simple principle: each lower layer contains one block more than the layer above.
+#
+# The figure illustrates the rule used by the builders:
+#
+#
+#
+# Your task is to write a program which reads the number of blocks the builders have,
+# and outputs the height of the pyramid that can be built using these blocks.
+#
+# Note: the height is measured by the number of fully completed layers - if the builders
+# don't have a sufficient number of blocks and cannot complete the next layer, they finish their work immediately.
+#
+# Test your code using the data we've provided.
+#
+#
+# Test Data
+#
+# Sample input: 6
+#
+# Expected output: The height of the pyramid: 3
+#
+# Sample input: 20
+#
+# Expected output: The height of the pyramid: 5
+#
+# Sample input: 1000
+#
+# Expected output: The height of the pyramid: 44
+#
+# Sample input: 2
+#
+# Expected output: The height of the pyramid: 1
+
+# Version 1: 16-03-2021
+
+total_blocks = int(input("Enter the number of blocks, with a max. of 999999: "))
+blocks_inlayer = 0
+layer_counter = 0
+height = 0
+total_usedblocks = 0
+
+while blocks_inlayer <= total_blocks:
+    height += 1
+    layer_counter += 1
+    blocks_inlayer += 1
+    total_blocks -= blocks_inlayer
+    total_usedblocks += blocks_inlayer
+    print("New layer ==>>")
+    print("actual height of pyramid", height)
+    print("amount of blocks in this layer:", blocks_inlayer)
+    print("amount of layers in this pyramid:", layer_counter)
+    print("total used blocks", total_usedblocks)
+    print("amount of unused blocks in storage:", total_blocks)
+    print()
+else:
+    print("There are not enough blocks in storage to finish another layer, so we have to stop building.")
+    print("We have used a total of", total_usedblocks, " blocks over", layer_counter, "layers. The height is:", height,".")
+    print()
+    print("Have a nice day!")
+
+
+
+
+
+
