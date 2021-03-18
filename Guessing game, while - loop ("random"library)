@@ -1,0 +1,40 @@
+# Building a guessing game as a while-loop exercise.
+# In version 1 a simple loop, only to be broken by the right guess.
+# In the next version a counter with a max of 3 guesses.
+# For this I am using a library called 'random', it generates 
+# a random number in a given range if coupled with .randrange
+# Thanks to GeekTutorials Australia for the help on this one.
+
+# version 1:
+
+# import random
+#
+# number = random.randrange(1, 10)
+# guess = int(input("your guess:"))
+#
+# while guess != number:
+#     print("Sorry you guessed wrong, try again. \n")
+#     guess = int(input("your guess:"))
+#
+# print("congratulations, you have guessed the number"
+
+# Version 2: with a counter of max 3, a countdown is added in the same loop.
+import random
+
+number = random.randrange(1, 10)
+counter = 3
+guess = int(input("your guess:"))
+
+
+
+while guess != number:
+    counter -= 1
+    if counter == 0:
+        print("sorry, you have guessed too many times. Game over.")
+        quit("Exit")
+    else:
+        print("Sorry you guessed wrong, try again. \n")
+        print(counter, "guesses left.")
+        guess = int(input("your guess:"))
+
+print("congratulations, you have guessed the number")
