@@ -25,16 +25,22 @@ number = random.randrange(1, 10)
 counter = 3
 guess = int(input("your guess:"))
 
+import random
 
+number = random.randrange(1, 10)
+counter = 3
+guess = int(input("your guess:"))
 
 while guess != number:
     counter -= 1
-    if counter == 0:
+    if guess == number:
+        print("congratulations, you have guessed the number")
+    elif counter == 0:
         print("sorry, you have guessed too many times. Game over.")
-        quit("Exit")
+        quit()
     else:
         print("Sorry you guessed wrong, try again. \n")
         print(counter, "guesses left.")
         guess = int(input("your guess:"))
 
-print("congratulations, you have guessed the number")
+
