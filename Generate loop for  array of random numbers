@@ -1,0 +1,14 @@
+#perhaps this could be a part of a bingo game or a lotto generator?
+
+import random #import the random library, this generates a random number in set range.
+
+randomnumber = random.randint(1, 30) #range of integer random numbers to be added to the array subsequently
+
+numbers = [randomnumber] # adding a random number
+while len(numbers) < 30:
+    numbers.append(randomnumber)
+    print(numbers)
+    randomnumber = random.randint(1, 999)
+
+print("\nTotal List length:", len(numbers))  # printing the list's length
+print(numbers)
