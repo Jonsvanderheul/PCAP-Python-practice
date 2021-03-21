@@ -1,0 +1,14 @@
+myList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+toFind = 5
+found = False
+i = 0   # this is a fake, but interpreter can give an error for i not being defined in the for loop
+
+for i in range(len(myList)):    # a slice is also possible
+    found = myList[i] == toFind
+    if found:
+        break
+
+if found:
+    print("Element found at index", i)
+else:
+    print("absent")
