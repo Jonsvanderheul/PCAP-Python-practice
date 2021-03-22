@@ -1,9 +1,9 @@
-def strangeListFunction(n):
-    strangeList = []
+def strangeListFunction(n): # n is the variable/value that has to be given at invocatoin of the function
+    strangeList = [] # build the list, still empty, for loop follows to fill the list
     
-    for i in range(0, n):
-        strangeList.insert(0, i)
+    for i in range(0, n): #creating the range of new entries. n is end of range and it'given during invocation. the entries are created by i
+        strangeList.insert(0, i) # insert puts the new entries in the list 0 is position (front of list), i is value (this goes on for as long as the range is.
     
-    return strangeList
+    return strangeList #stop function after for loop is completed.
 
-print(strangeListFunction(5))
+print(strangeListFunction(5)) # here the value of n is given, during the invocation of the function (range of the for loop is dependent on this value).
