@@ -1,0 +1,25 @@
+fibonacci:
+
+#fib1 = 1
+#fib2 = 1
+#fib3 = 1 + 1 = 2
+#fib4 = 1 + 2 = 3
+#fib5 = 2 + 3 = 5
+#fib6 = 3 + 5 = 8
+#fib7 = 5 + 8 = 13
+
+def fib(n):
+    if n < 1:
+         return None
+    if n < 3:
+        return 1
+
+    elem1 = elem2 = 1
+    sum = 0
+    for i in range(3, n + 1):
+        sum = elem1 + elem2
+        elem1, elem2 = elem2, sum
+    return sum
+
+for n in range(1, 10): # testing
+    print(n, "->", fib(n))
