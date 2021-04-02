@@ -1,0 +1,24 @@
+# maken lege lijst stack, bepalen waarde van geldveriable
+stack = []
+moneystack = 34.09
+
+# maken van functie vullen(pushing) van lijst stack,  1 argument en zonder return
+def push(val):
+  stack.append(val)
+  
+# maken van functie legen(popping), zonder argument, bepaald dat laatste toevoeging als eerste eruit gaat, return.
+def pop():
+  val = stack[-1]
+  del stack[-1]
+  return val
+ 
+# vullen van de stack
+push(1)
+push("hallo")
+push(moneystack)
+
+# legen van de stack, in volgorde van LIFO (Last in last out)
+print(pop())
+print(pop())
+print(pop())
+  
