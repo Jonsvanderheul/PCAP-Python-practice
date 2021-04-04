@@ -1,0 +1,50 @@
+# Subclasses: classes are empty, this is purely for demonstration
+class Vehicle:
+    pass
+
+class LandVehicle(Vehicle):
+    pass
+
+class TrackedVehicle(LandVehicle):
+    pass
+
+# For loop, nested. demonstration of issubclass function
+for cls1 in [Vehicle, LandVehicle, TrackedVehicle]:
+    for cls2 in [Vehicle, LandVehicle, TrackedVehicle]: 
+        print(issubclass(cls1, cls2), end="\t")
+    print()
+    
+  # ↓ is a subclass of →	Vehicle	LandVehicle	TrackedVehicle
+  #   Vehicle	          True	   False	    False
+  #   LandVehicle        True	   True	      False
+  #   TrackedVehicle	    True	   True	      True 
+  
+  
+  
+  
+    
+# Instances: classes are empty, this is purely for demonstration
+class Vehicle:
+    pass
+
+class LandVehicle(Vehicle):
+    pass
+
+class TrackedVehicle(LandVehicle):
+    pass
+
+
+myVehicle = Vehicle()
+myLandVehicle = LandVehicle()
+myTrackedVehicle = TrackedVehicle()
+
+for obj in [myVehicle, myLandVehicle, myTrackedVehicle]:
+    for cls in [Vehicle, LandVehicle, TrackedVehicle]:
+        print(isinstance(obj, cls), end="\t")
+    print()
+    
+    
+# ↓ is an instance of →	Vehicle	LandVehicle	TrackedVehicle
+# myVehicle	            True	  False	      False
+# myLandVehicle	        True	  True	      False
+# myTrackedVehicle	    True	  True	      True
