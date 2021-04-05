@@ -1,0 +1,18 @@
+listOne = []
+
+for ex in range(6):
+    listOne.append(10 ** ex)
+
+
+listTwo = [10 ** ex for ex in range(6)]
+
+print(listOne)
+print(listTwo)
+
+
+lst3 = []
+
+for x in range(10):
+    lst3.append(1 if x % 2 == 0 else 0)
+
+print(lst3)
